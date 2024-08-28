@@ -11,4 +11,4 @@
 Maven分模块开发:
 Sky-common 存放公共类（工具类、常量类、异常类）
 Sky-POJO 实体类、VO(视图对象)、DTO(数据传输对象-程序各层间传递数据)
-Sky-server 后端服务、配置文件、Controller、Server、Mapper
+Sky-server 后端服务、配置文件、拦截器、Controller、Server、Mapper
