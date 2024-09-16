@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.util.DigestUtils;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
@@ -31,6 +32,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
      * @param registry
      */
     protected void addInterceptors(InterceptorRegistry registry) {
+        DigestUtils.md5DigestAsHex("123456".getBytes());
         log.info("开始注册自定义拦截器...");
         registry.addInterceptor(jwtTokenAdminInterceptor)
                 .addPathPatterns("/admin/**")
