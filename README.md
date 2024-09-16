@@ -19,7 +19,10 @@ Sky-server 后端服务、配置文件、拦截器、Controller、Server、Mappe
 
 后端测试Swagger
 
-用户注册模块：
+开发注意事项：
 
 使用常量类初始化默认信息
 
+ThreadLocal-Tomcat中每次请求都是一个线程，每个线程具有单独的存储空间-可以据此传递变量的值
+
+node.js版本14.20.0（尚存部分前端依赖报错问题，目前无影响）
