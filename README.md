@@ -13,6 +13,8 @@ Sky-common 存放公共类（工具类、常量类、异常类）
 Sky-POJO 实体类、VO(视图对象)、DTO(数据传输对象-程序各层间传递数据)
 Sky-server 后端服务、配置文件、拦截器、Controller、Server、Mapper
 
+JWT:JSON Web Token,是一种基于JSON的开放标准，用于在各方之间作为JSON对象安全地传输信息，常用于身份验证和信息交换。Header-Payload-Signature，
+
 开发流程：
 
 订制接口->前后端开发->联调->提测
