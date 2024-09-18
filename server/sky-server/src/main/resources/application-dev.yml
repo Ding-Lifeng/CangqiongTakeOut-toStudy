@@ -6,3 +6,8 @@ sky:
     database: sky_take_out
     username: root
     password: Tt010610
+  alioss:
+    endpoint: your endpoint
+    access-key-id:  your accessId
+    access-key-secret: your keySecret
+    bucket-name: your bucketName
