@@ -74,6 +74,8 @@ var变量-函数作用域 let变量-块作用域 const常量
 
 DOM-Js编程接口(传统用法)
 
+async通过同步的方式执行异步任务
+
 #### 响应式布局（css+Js联合实现）
 
 meta标签	rem单位（font-size倍数）	wh/vh单位
@@ -81,6 +83,12 @@ meta标签	rem单位（font-size倍数）	wh/vh单位
 Flex弹性盒子-（main axis\cross axis\main size\cross size）
 
 #### Vue
+
+Js框架 特点（响应式编程-不再操作dom对象-MVVM实现数据的双向绑定、组件化）
+
+生命周期（创建-挂载-更新-销毁）
+
+生命周期钩子
 
 app.vue-主组件，页面入口文件
 
