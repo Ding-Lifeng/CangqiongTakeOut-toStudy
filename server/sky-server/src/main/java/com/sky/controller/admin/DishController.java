@@ -78,13 +78,25 @@ public class DishController {
     /**
      * 修改菜品
      *
-     * @param dishDTO
      * @return
      */
     @PutMapping
     @ApiOperation("修改菜品")
     public Result update(@RequestBody DishDTO dishDTO) {
         dishService.updateWithFlavor(dishDTO);
+        return Result.success();
+    }
+
+    /**
+     * 菜品起售停售
+     * @param status
+     * @param id
+     * @return
+     */
+    @PostMapping("/status/{status}")
+    @ApiOperation("菜品起售停售")
+    public Result<String> startOrStop(@PathVariable Integer status, Long id){
+        dishService.startOrStop(status,id);
         return Result.success();
     }
 }

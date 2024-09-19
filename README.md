@@ -50,6 +50,8 @@ node.js版本14.20.0（尚存部分前端依赖报错问题，目前无影响）
 
 @PathVariable 映射URL绑定的占位符
 
+resultType从数据库提取数据 parameterType向数据库存入数据
+
 #### 前端（解耦-存放静态资源）
 
 ##### css
