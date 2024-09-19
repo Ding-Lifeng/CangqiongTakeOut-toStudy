@@ -43,3 +43,51 @@ node.js版本14.20.0（尚存部分前端依赖报错问题，目前无影响）
 #### 同时操作多个数据表
 
 @Transactional注解-确保操作的原子性，同时成功或同时失败。
+
+#### 前端（解耦-存放静态资源）
+
+##### css
+
+块元素-行内元素-行内块元素（三者可通过display互相转换）
+
+盒子模型（控制布局）-网页的每个元素可视作盒子，由于context-内边距-边框-外边距组成
+
+布局方式：
+
+1.标准流
+
+2.浮动（float）-元素顶端对齐同行排列  父元素清除浮动（保障显示正常、无元素重叠，overflow）
+
+3.定位：
+
+3.1相对定位 position:relative + left/right/top/bottom
+
+3.2绝对定位（脱离文档流） position:absolute + 位移
+
+3.3固定定位（脱离文档流） position:fixed
+
+##### Js
+
+var变量-函数作用域 let变量-块作用域 const常量
+
+事件（onClick、onMouseOver鼠标经过）
+
+DOM-Js编程接口(传统用法)
+
+#### 响应式布局（css+Js联合实现）
+
+meta标签	rem单位（font-size倍数）	wh/vh单位
+
+Flex弹性盒子-（main axis\cross axis\main size\cross size）
+
+#### Vue
+
+app.vue-主组件，页面入口文件
+
+#### Ajax
+
+前后端异步通信，等待响应过程中前端不会阻塞页面。
+
+#### Axios
+
+HTTP客户端，从node.js发出http请求，拦截请求和响应。
