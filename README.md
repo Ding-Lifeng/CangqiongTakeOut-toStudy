@@ -52,6 +52,30 @@ node.js版本14.20.0（尚存部分前端依赖报错问题，目前无影响）
 
 resultType从数据库提取数据 parameterType向数据库存入数据
 
+##### RESTFUL API:
+
+接口规范
+
+GET（安全且幂等）
+
+POST（不安全且不幂等）
+
+PUT（不安全但幂等）
+
+DELETE（不安全但幂等）
+
+错误码-200（OK）、400（坏请求-参数错误）、404（资源不存在）、406（服务端不支持-后端返回结果前端无法解析）、500（通用错误响应）
+
+##### Mybatis:
+
+```
+useGeneratedKeys="true" keyProperty="id"
+```
+
+-插入记录后获取数据库自动生成的主键ID，主键ID保存在实体类中（建立关联表时使用）
+
+分页查询Page（page.getTotal-获取查询结果的记录数，page.getResult-获取查询结果列表，page（long current, long size）-根据当前页码和每页记录数创建分页对象）
+
 #### 前端（解耦-存放静态资源）
 
 ##### css
