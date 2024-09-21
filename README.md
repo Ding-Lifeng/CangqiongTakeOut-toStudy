@@ -44,13 +44,27 @@ node.js版本14.20.0（尚存部分前端依赖报错问题，目前无影响）
 
 @Transactional注解-确保操作的原子性，同时成功或同时失败。
 
+#### 文件上传
+
+OSS对象存储服务器-UUID（通用唯一标识符）实现文件名去重
+
 #### 小知识补充
 
+##### HTTP组成部分、参数类型、处理方法
+
+请求报文：请求行（请求协议+请求URL地址+请求方法）+请求头（Authorization-token）+请求数据（URL参数/content-type(默认格式、form-data上传文件、json)）
+
+响应报文：状态行（code）+消息报头+响应正文
+
+HTTP参数类型（请求头参数（head）、路径参数（path）、查询参数（query）、请求体参数（body））
+
+路径参数{x}-@PathVariable 映射URL绑定的占位符
+
+Query（HTTP查询参数-？之后）-参数名接收/@RequestParam接收或映射
+
+Body请求体参数（json）-@RequestBody
+
 后端服务器会根据不同的HTTP方法（Post\Put\Get）执行不同的处理函数
-
-@PathVariable 映射URL绑定的占位符
-
-resultType从数据库提取数据 parameterType向数据库存入数据
 
 ##### RESTFUL API:
 
@@ -64,7 +78,7 @@ PUT（不安全但幂等）
 
 DELETE（不安全但幂等）
 
-错误码-200（OK）、400（坏请求-参数错误）、404（资源不存在）、406（服务端不支持-后端返回结果前端无法解析）、500（通用错误响应）
+错误码-200（OK）、400（坏请求-参数错误）、401（未授权）、404（资源不存在）、406（服务端不支持-后端返回结果前端无法解析）、500（通用错误响应）
 
 ##### Mybatis:
 
@@ -75,6 +89,8 @@ useGeneratedKeys="true" keyProperty="id"
 -插入记录后获取数据库自动生成的主键ID，主键ID保存在实体类中（建立关联表时使用）
 
 分页查询Page（page.getTotal-获取查询结果的记录数，page.getResult-获取查询结果列表，page（long current, long size）-根据当前页码和每页记录数创建分页对象）
+
+resultType从数据库提取数据 parameterType向数据库存入数据
 
 #### 前端（解耦-存放静态资源）
 
