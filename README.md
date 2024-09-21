@@ -48,6 +48,16 @@ node.js版本14.20.0（尚存部分前端依赖报错问题，目前无影响）
 
 OSS对象存储服务器-UUID（通用唯一标识符）实现文件名去重
 
+#### Redis
+
+Spring Data Redis
+
+基于内存的键值对结构数据库
+
+特点：基于内存存储，存储热点数据
+
+数据类型（key-字符串，value-（String、hash（类Java HashMap）、list、set（无序集合）、sorted set））
+
 #### 小知识补充
 
 ##### HTTP组成部分、参数类型、处理方法
@@ -91,6 +101,10 @@ useGeneratedKeys="true" keyProperty="id"
 分页查询Page（page.getTotal-获取查询结果的记录数，page.getResult-获取查询结果列表，page（long current, long size）-根据当前页码和每页记录数创建分页对象）
 
 resultType从数据库提取数据 parameterType向数据库存入数据
+
+##### lombok注解：
+
+@Slf4j-日志输出（log.info）
 
 #### 前端（解耦-存放静态资源）
 
