@@ -58,6 +58,8 @@ Spring Data Redis
 
 数据类型（key-字符串，value-（String、hash（类Java HashMap）、list、set（无序集合）、sorted set））
 
+设置redis key的序列化器（new StringRedisSerializer()）-便于使用不同方式查看Redis key
+
 #### 小知识补充
 
 ##### HTTP组成部分、参数类型、处理方法
