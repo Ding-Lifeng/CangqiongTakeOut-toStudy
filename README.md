@@ -60,6 +60,10 @@ Spring Data Redis
 
 设置redis key的序列化器（new StringRedisSerializer()）-便于使用不同方式查看Redis key
 
+#### HttpClient
+
+创建HttpClient对象->创建请求方法实例并指定URL（GET/POST）->setEntity设置请求参数->调用execute发送请求返回Response对象->获取响应头/响应体->关闭资源（response/httpclient）
+
 #### 小知识补充
 
 ##### HTTP组成部分、参数类型、处理方法
