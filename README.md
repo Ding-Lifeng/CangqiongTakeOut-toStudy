@@ -2,7 +2,7 @@
 全栈项目（Web、微信小程序）学习用
 苍穹外卖
 
-#### 流程参考：
+#### 流程参考
 
 （需求说明书+产品原型） -> （总体设计）UI设计、数据库设计、接口设计 -> 详细设计+编码+单元测试 -> 测试 -> 上线运维
 
@@ -10,23 +10,23 @@
 说明技术选型
 ![1724840801499](https://github.com/user-attachments/assets/8b9b0c40-2b96-4ef7-8dc4-98a81c5a58b4)
 
-#### Maven分模块开发:
+#### Maven分模块开发
 
 Sky-common 存放公共类（工具类、常量类、异常类）
 Sky-POJO 实体类、VO(视图对象)、DTO(数据传输对象-程序各层间传递数据)
 Sky-server 后端服务、配置文件、拦截器、Controller、Server、Mapper
 
-#### JWT:
+#### JWT
 
 JSON Web Token,是一种基于JSON的开放标准，用于在各方之间作为JSON对象安全地传输信息，常用于身份验证和信息交换。Header-Payload-Signature，
 
-#### 前后端编码开发流程：
+#### 前后端编码开发流程
 
 订制接口->前后端开发->联调->提测
 
 后端测试Swagger
 
-#### 开发注意事项：
+#### 开发注意事项
 
 使用常量类初始化默认信息
 
@@ -78,9 +78,19 @@ SpringCache的key生成-@CachePut(cacheNames = "xxxx",key="#形参.属性")-生�
 
 创建HttpClient对象->创建请求方法实例并指定URL（GET/POST）->setEntity设置请求参数->调用execute发送请求返回Response对象->获取响应头/响应体->关闭资源（response/httpclient）
 
-#### 小知识补充
+#### 订单支付(微信支付)
 
-##### HTTP组成部分、参数类型、处理方法
+JSAPI下单-调用接口在微信支付服务后台生成预支付交易单
+
+小程序调起支付API
+
+#### 内网穿透
+
+将自己的主机作为服务器，使外网能够访问内网。
+
+用途：开发过程中的功能测试
+
+#### HTTP组成部分、参数类型、处理方法
 
 请求报文：请求行（请求协议+请求URL地址+请求方法）+请求头（Authorization-token）+请求数据（URL参数/content-type(默认格式、form-data上传文件、json)）
 
@@ -96,7 +106,7 @@ Body请求体参数（json）-@RequestBody
 
 后端服务器会根据不同的HTTP方法（Post\Put\Get）执行不同的处理函数
 
-##### RESTFUL API:
+#### RESTFUL API:
 
 接口规范
 
@@ -110,7 +120,7 @@ DELETE（不安全但幂等）
 
 错误码-200（OK）、400（坏请求-参数错误）、401（未授权）、404（资源不存在）、406（服务端不支持-后端返回结果前端无法解析）、500（通用错误响应）
 
-##### Mybatis:
+#### Mybatis:
 
 ```
 useGeneratedKeys="true" keyProperty="id"
@@ -122,7 +132,7 @@ useGeneratedKeys="true" keyProperty="id"
 
 resultType从数据库提取数据 parameterType向数据库存入数据
 
-##### lombok注解：
+#### lombok注解：
 
 @Slf4j-日志输出（log.info）
 
