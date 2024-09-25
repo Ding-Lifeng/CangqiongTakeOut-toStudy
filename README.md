@@ -60,6 +60,20 @@ Spring Data Redis
 
 设置redis key的序列化器（new StringRedisSerializer()）-便于使用不同方式查看Redis key
 
+#### Spring Cache
+
+基于注解的缓存功能，底层缓存实现（EHCache、Caffeine、Redis）
+
+@Cacheable-缓存中存在数据，返回缓存数据；缓存中没有数据，调用方法并将方法返回值放到缓存中。
+
+@CacheEvict-从缓存中删除一条或多条数据。
+
+@CachePut-将方法返回值放到缓存中
+
+SpringCache的key生成-@CachePut(cacheNames = "xxxx",key="#形参.属性")-生成的key:cacheNames::形参.属性
+
+删除缓存中的全部键值对-@CacheEvict(cacheNames = "xxxx",allEntries = true)
+
 #### HttpClient
 
 创建HttpClient对象->创建请求方法实例并指定URL（GET/POST）->setEntity设置请求参数->调用execute发送请求返回Response对象->获取响应头/响应体->关闭资源（response/httpclient）
